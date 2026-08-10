@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090a0d">
+  <title>Watch Video</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">MV<span>STYLE</span></a>
+    <a href="/" class="back-link">← Back</a>
+  </header>
+
+  <main class="container watch-container">
+    <section id="watchBox" class="watch-box">
+      <div class="player-wrap">
+        <video id="player" class="player" controls playsinline preload="metadata"></video>
+      </div>
+      <h1 id="watchTitle" class="watch-title">Loading...</h1>
+      <p id="watchDescription" class="watch-description"></p>
+    </section>
+
+    <section class="similar-section">
+      <div class="section-heading">
+        <h2>Similar Videos</h2>
+      </div>
+      <div id="similarGrid" class="video-grid"></div>
+    </section>
+  </main>
+
+  <script src="/assets/watch.js"></script>
+</body>
+</html>
