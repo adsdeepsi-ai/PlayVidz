@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090a0d">
+  <title>MVStyle Admin</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">MV<span>STYLE</span></a>
+    <a href="/" class="back-link">Site</a>
+  </header>
+
+  <main class="container admin-container">
+    <section class="admin-card">
+      <h1>Add Video</h1>
+      <p class="muted">Use a direct video URL such as an MP4 URL.</p>
+
+      <form id="addForm">
+        <label>Admin Token
+          <input id="token" type="password" autocomplete="off" placeholder="Enter ADMIN_TOKEN">
+        </label>
+
+        <label>Title
+          <input id="title" required maxlength="180" placeholder="Video title">
+        </label>
+
+        <label>Video URL
+          <input id="videoUrl" required type="url" placeholder="https://example.com/video.mp4">
+        </label>
+
+        <label>Thumbnail URL
+          <input id="thumbUrl" type="url" placeholder="https://example.com/thumb.jpg">
+        </label>
+
+        <label>Duration
+          <input id="duration" maxlength="20" placeholder="0:29">
+        </label>
+
+        <label>Description
+          <textarea id="description" rows="4" maxlength="1000" placeholder="Short description"></textarea>
+        </label>
+
+        <button type="submit" class="primary-btn">Add Video</button>
+        <div id="message" class="form-message"></div>
+      </form>
+    </section>
+
+    <section class="admin-card">
+      <div class="admin-list-head">
+        <h2>Videos</h2>
+        <button id="refresh" class="small-btn">Refresh</button>
+      </div>
+      <div id="adminList"></div>
+    </section>
+  </main>
+
+  <script src="/assets/admin.js"></script>
+</body>
+</html>
